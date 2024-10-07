@@ -1,0 +1,870 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.nav-bar {
+    background: linear-gradient(to right, #e6f2f2, #f0f9f9);
+    color: #333;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 100px; /* Adjust the size as needed */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #00796b; /* Color change on hover */
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.signup-btn {
+    background-color: #54BD95;
+    ;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.signup-btn:hover {
+    background-color: #54BD95; /* Darker green on hover */
+}
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .nav-links, .nav-actions {
+        display: none;
+    }
+    .nav-toggle {
+        display: block;
+    }
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-logo {
+        margin-bottom: 10px;
+    }
+}
+
+.show-nav .nav-links, .show-nav .nav-actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+    background: linear-gradient(to right, #e6f2f2, #f0f9f9);
+}
+
+.hero-text {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 48px; /* Larger and more readable font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 20px; /* Larger and more readable font size */
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-try {
+    background-color: #54BD95;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px; /* Larger button text */
+    border-radius: 25px; /* Smooth round edges */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-try:hover {
+    background-color: #43a047;
+}
+
+.view-demo {
+    display: flex;
+    align-items: center;
+}
+
+.view-demo img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.view-demo span {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Hero Image */
+.hero-image {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-text {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .hero-image {
+        flex-basis: 100%;
+        padding: 0;
+    }
+}
+.hero-text img {
+    max-width: 100%; /* يضمن أن الصورة لن تتجاوز عرض الحاوية */
+    height: auto; /* يحافظ على نسبة العرض إلى الارتفاع */
+}
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 0;
+    }
+    .hero-text h1 {
+        font-size: 36px; /* Slightly smaller font on very small screens */
+    }
+    .hero-text p {
+        font-size: 16px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Partners Section */
+.partners {
+    text-align: center;
+    padding: 50px 0; 
+    background: linear-gradient(to right, #e6f2f2, #f0f9f9);
+}
+
+.partners h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333; 
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.partner-logos img {
+    margin: 10px; /* تقليل الهوامش لجعلها أكثر تقاربًا */
+    max-height: 50px; 
+    filter: grayscale(100%);
+    transition: filter 0.3s ease; 
+}
+
+/* إضافة استعلام وسائط لتحسين الترتيب في الشاشات الأصغر */
+@media (max-width: 768px) {
+    .partner-logos img {
+        margin: 5px; /* تقليل الهوامش أكثر للشاشات الصغيرة */
+        max-height: 40px; /* تقليل ارتفاع الشعارات */
+    }
+}
+
+@media (max-width: 480px) {
+    .partners h2 {
+        font-size: 2rem; /* تقليل حجم العنوان في الشاشات الأصغر */
+    }
+
+    .partner-logos {
+        flex-direction: column; /* ترتيب الشعار عمودياً */
+    }
+}
+.support {
+    padding: 3rem 5%;
+    background-color: #F9F8FE;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.support-intro {
+    width: 50%;
+}
+
+.support-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.support-intro p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.support-images {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.image {
+    text-align: center;
+}
+
+.image img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.rating, .company {
+    font-size: 1rem;
+}
+
+.support-features {
+    width: 40%;
+}
+
+.support-feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.feature-image-container {
+    margin-right: 1rem;
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px; /* الحواف الناعمة */
+}
+
+.icon-box img {
+    width: 24px;
+    height: 24px;
+}
+
+.support-feature h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.support-feature p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* لجعل القسم متجاوب على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .support-intro, .support-features {
+        width: 100%;
+    }
+
+    .support-features {
+        margin-top: 2rem;
+    }
+}
+.features {
+    padding: 3rem 5%;
+    background: linear-gradient(to right, #e6f2f2, #f0f9f9);
+}
+
+.header-content {
+    flex: 1; /* لضمان تمدد النص والزر على العرض الكامل */
+}
+
+.header-content h2, .header-content p {
+    margin: 0;
+}
+
+/* جعل الزر يظهر بجانب النص وليس تحته */
+.header-content button {
+    margin-top: 0;
+}
+.btn-start {
+    background-color: #54BD95;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-start:hover {
+    background-color: #23B387;
+}
+
+.feature-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+/* إزالة الخلفية والظل من العناصر */
+.feature-item {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left; /* تعديل المحاذاة لليسار */
+    flex: 1;
+}
+/* لترتيب العنوان والنص والزر في نفس الصف */
+.features-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    gap: 2rem; /* لضبط المسافة بين العناصر */
+}
+
+
+.feature-item img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 1rem;
+    max-width: 400px; /* ضبط أقصى عرض للصورة */
+    margin-bottom: 1rem;
+}
+
+.feature-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* لجعل القسم متجاوب على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .feature-items {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        margin-bottom: 2rem;
+    }
+}
+.benefits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: linear-gradient(to right, #f5f7fa, #e2ebf0);
+}
+
+.benefit-text {
+    flex: 1;
+}
+
+.benefit-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.benefit-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefit-text ul li {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.benefit-text ul li img {
+    margin-right: 10px;
+}
+
+.benefit-images {
+    position: relative;
+    flex: 1;
+    text-align: right;
+}
+
+.benefit-images .main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.income-info, .transfer-status {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.income-info p {
+    font-weight: bold;
+    margin: 0;
+}
+
+.income-info span {
+    font-size: 1.5rem;
+    color: #54BD95;
+}
+
+.transfer-status p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #54BD95;
+}
+
+@media (max-width: 768px) {
+    .benefits {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .benefit-text {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .benefit-images {
+        text-align: center;
+    }
+
+    .overlay-text {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+}
+/* CSS for the Pricing Section */
+.pricing {
+    text-align: center;
+    background-color: #f0f9f4; /* Light green gradient */
+    padding: 50px 20px;
+}
+
+.pricing-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pricing-header p {
+    color: #6b7280; /* Gray text */
+    margin-bottom: 20px;
+}
+
+/* Billing toggle button styles */
+.billing-toggle {
+    display: inline-flex;
+    background-color: #e8f2ed; /* Adjusted light gray background */
+    border-radius: 10px; /* Rounded edges */
+    padding: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the toggle container */
+}
+
+.billing-option {
+    padding: 10px 30px; /* Adjusted padding for more spacing */
+    border-radius: 10px;
+    background-color: transparent;
+    color: #6b7280; /* Gray text for inactive state */
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: none; /* Add this line to remove border */
+}
+
+.billing-option.active {
+    background-color: #10b981; /* Green background for active button */
+    color: white; /* White text for active button */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for the active button */
+    border: none; /* Add this line to remove border */
+}
+
+.billing-option:hover {
+    background-color: #10b981; /* Hover effect */
+    color: white;
+    border: none; /* Add this line to remove border */
+}
+
+
+/* Responsive Layout */
+.pricing-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* For responsiveness */
+}
+
+/* General Card Styles */
+.pricing-option {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-option h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.pricing-option h3 {
+    font-size: 36px;
+    color: #000805; 
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.pricing-option ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-option ul li {
+    margin: 10px 0;
+    color: #6b7280;
+}
+
+/* Pro Plan (Middle Card) Styles */
+.pricing-option.pro {
+    background-color: #54BD95; /* خلفية خضراء للبطاقة */
+    color: white;
+    position: relative;
+}
+
+/* تحديد الجزء الداخلي بخلفية بيضاء */
+.pricing-pro-content {
+    background-color: white; /* خلفية بيضاء للجزء الداخلي */
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* ظل ناعم حول الجزء الأبيض */
+}
+
+.pricing-option.pro ul li {
+    color: #6b7280; /* لون النص في القائمة الرمادي */
+}
+
+/* تخصيص زر "Go to pro" */
+.pricing-option.pro button {
+    background-color: #10b981;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.pricing-option.pro button:hover {
+    background-color: #0d865b;
+    color: white;
+}
+.pricing-option.pro h3 {
+    font-size: 36px;
+    color: #ffffff; /* اللون الأبيض */
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+/* Button inside cards */
+.pricing-option button {
+    background-color: rgb(255, 255, 255); /* White background for button */
+    color: #10b981; /* Green text */
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+
+    /* إضافة ظل خفيف */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* X, Y, blur, intensity */
+}
+
+.pricing-option button:hover {
+    background-color: #10b981;
+    color: white;
+
+    /* تضخيم الظل عند التمرير */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* زيادة حجم الظل في حالة الـ hover */
+}
+
+/* Responsive media query for smaller screens */
+@media (max-width: 768px) {
+    .pricing-option {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 20px;
+    }
+}
+.footer {
+    padding: 3rem 5%;
+    background-color: #1D1E2C;
+    color: white;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 3rem;
+}
+
+.people-saying {
+    grid-column: 1 / 2;
+}
+
+.footer-info {
+    grid-column: 2 / 3;
+}
+
+.footer-section {
+    grid-column: 1 / 2;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between; /* توزيع الأقسام بالتساوي */
+    gap: 2rem; /* مسافة بين الأقسام */
+}
+
+.footer-section {
+    flex: 1;
+    max-width: 100%;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-form {
+    background-color: #242537;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contact-form input, 
+.contact-form button {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #28D190;
+    color: white;
+    cursor: pointer;
+}
+
+.email-input-wrapper {
+    display: flex; /* استخدام flex لجعل الإدخال والزرا معًا */
+    align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+    position: relative; /* لجعل العناصر الأخرى تأخذ موضعها بناءً على هذا العنصر */
+}
+
+.email-input {
+    flex: 1; /* يجعل حقل الإدخال يأخذ المساحة المتاحة */
+    padding: 0.75rem;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    width: 100%; 
+}
+
+.email-button-wrapper {
+    position: absolute; /* يجعل العنصر يتمركز فوق حقل الإدخال */
+    right: 0; /* المسافة من الجانب الأيمن */
+    display: flex; /* استخدام flex لتوسيع العناصر داخل الحاوية */
+    align-items: center; /* محاذاة العناصر عموديًا في المنتصف */
+}
+
+.ellipse {
+    width: 100%; /* حجم مناسب للدائرة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%; /* تحديد موقع السهم عند منتصف الحاوية عموديًا */
+    left: 50%; /* تحديد موقع السهم عند منتصف الحاوية أفقيًا */
+    transform: translate(-50%, -50%); /* نقل السهم إلى المنتصف بشكل دقيق */
+    width: 15px; /* حجم السهم */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع للسهم */
+}
+
+
+
+.footer-links .footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-links .footer-section p {
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-images img {
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.footer p {
+    color: #CCCCCC;
+}
+
+.footer a {
+    color: #28D190;
+    text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* جعل الأعمدة تتراصف عمودياً */
+    }
+
+    .footer-info {
+        grid-column: 1 / 2; /* وضع الفوتر في العمود الأول في الشاشات الصغيرة */
+    }
+
+    .contact-form {
+        display: flex; /* استخدام flex لسهولة توزيع العناصر */
+        flex-direction: column; /* ترتيب العناصر عمودياً */
+    }
+
+    .contact-form img {
+        max-width: 100%; /* التأكد من تناسب الصورة مع الحاوية */
+        height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    }
+
+    .contact-form label {
+        margin-top: 1rem; /* إضافة مسافة بين كل حقل */
+    }
+
+    .contact-form input,
+    .contact-form button {
+        width: 100%; /* التأكد من عرض الإدخال بالكامل */
+        box-sizing: border-box; /* إضافة صندوق الحدود ليكون العرض شامل الحواف */
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column; /* ترتيب العناصر عمودياً */
+        gap: 1rem; /* إضافة مسافة بين الأقسام */
+    }
+
+    .footer-section {
+        margin-bottom: 2rem; /* إضافة مسافة تحت كل قسم */
+    }
+}
